@@ -67,6 +67,8 @@ if(eventType === "user.created"){
         photo: image_url
     }
 
+    console.log(user, "user111");
+    
      const newUser = await createUser(user)
 
      if(newUser){

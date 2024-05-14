@@ -36,7 +36,7 @@ export type CreateUserParams = {
   export type UpdateEventParams = {
     userId: string
     event: {
-      _id: string
+      id: string
       title: string
       imageUrl: string
       description: string
@@ -96,6 +96,11 @@ export type CreateUserParams = {
       _id: string
       name: string
     }
+  }
+
+  export type EventFormProps = {
+    type: string,
+    userId: "Create" | "Update"
   }
   
   // ====== CATEGORY PARAMS

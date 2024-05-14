@@ -25,6 +25,7 @@ model User {
 
 model Event {
   id              Int       @id @default(autoincrement())
+  userId          String
   title           String  
   description     String?
   location        String?
@@ -35,6 +36,20 @@ model Event {
   price           String?
   isFree          Boolean
   url             String?
+  categoryId      String
+}
 
-  // category and organizer are still there to be done
+model Category {
+  id    Int    @id @default(autoincrement())
+  name  String @unique
+}
+
+
+model Order {
+  id         Int      @id @default(autoincrement())
+  createdAt  DateTime @default(now())
+  stripeId   String   @unique
+  totalAmount String?   
+  eventId    String
+  buyerId    String
 }

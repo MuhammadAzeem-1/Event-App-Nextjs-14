@@ -21,10 +21,14 @@ const Header = () => {
             </SignedIn>
 
             <div className='flex w-32 justify-end gap-3'>
+
+                {/* After Login - Signup By User */}
                 <SignedIn>
                     <UserButton afterSignOutUrl='/'/>
                     <MobileNav />
                 </SignedIn>
+                
+                {/* Before Login - Signup By User */}
                 <SignedOut>
                     <Button asChild className='rounded-full' size="lg" >
                         <Link href={"/sign-in"}>
