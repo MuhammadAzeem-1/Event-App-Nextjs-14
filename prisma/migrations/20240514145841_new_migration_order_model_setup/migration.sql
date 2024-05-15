@@ -44,8 +44,8 @@ CREATE TABLE "Order" (
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "stripeId" TEXT NOT NULL,
     "totalAmount" TEXT,
-    "eventId" INTEGER NOT NULL,
-    "buyerId" INTEGER NOT NULL,
+    "eventId" TEXT NOT NULL,
+    "buyerId" TEXT NOT NULL,
 
     CONSTRAINT "Order_pkey" PRIMARY KEY ("id")
 );

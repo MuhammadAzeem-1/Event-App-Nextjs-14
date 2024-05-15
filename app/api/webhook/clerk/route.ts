@@ -7,7 +7,8 @@ import { NextResponse } from 'next/server'
 import { UpdateUserParams } from '@/types'
 
 export async function POST(req: Request) {
-
+   console.log("kkjsdfjdsvaghssdfghjkjhgfdsdfgbnmjhgrertybvcdrtyjnbvfdrtyjm xsdfgh");
+   
   // You can find this in the Clerk Dashboard -> Webhooks -> choose the webhook
   const WEBHOOK_SECRET = process.env.WEBHOOK_SECRET
 
@@ -54,7 +55,8 @@ export async function POST(req: Request) {
   // Get the ID and type
   const { id } = evt.data;
   const eventType = evt.type;
-
+  console.log(eventType, 'WRKJNWIJENWIRNE3HN');
+  
 if(eventType === "user.created"){
     const {id, email_addresses, image_url, first_name, last_name, username} = evt.data
 

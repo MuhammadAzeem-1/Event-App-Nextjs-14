@@ -42,6 +42,8 @@ export const checkoutOrder= async (order: CheckoutOrderParams) =>{
 
 export const createOrder = async (order: CreateOrderParams) =>{
   try {
+    console.log(order, "jsdhd");
+    
     const newOrder = await prisma.order.create({
       data: {
         stripeId: order.stripeId,
